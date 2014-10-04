@@ -28,4 +28,4 @@ app.get('/lookup', function(req, res){
   
 });
 
-app.listen(3000);
+app.set('port', (process.env.PORT || 5000))
