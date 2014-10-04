@@ -3,6 +3,10 @@ var geoip = require('geoip-lite');
 var request = require('request');
 var app = express();
 
+app.get('/', function(request, response) {
+    response.send('Hello World!')
+})
+
 app.get('/lookup', function(req, res){
   var loc = {};
   var geo = geoip.lookup(req.query.ip);
