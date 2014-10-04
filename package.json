@@ -1,0 +1,16 @@
+{
+  "name": "lageserver",
+  "version": "0.0.1",
+  "description": "get specific geolocation from an ip",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.9.5",
+    "geoip-lite": "^1.1.3",
+    "request": "^2.44.0"
+  }
+}
