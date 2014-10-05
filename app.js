@@ -23,7 +23,7 @@ app.get('/lookup', function(req, res){
       loc.state = geo.state;
       loc.city = geo.city;
       loc.lat = geo.ll[0];
-      loc.lng = geo.ll[0];
+      loc.lng = geo.ll[1];
 
       res.json(loc);
     }
