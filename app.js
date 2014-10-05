@@ -20,11 +20,11 @@ app.get('/lookup', function(req, res){
       loc.address = body.results[0].formatted_address;
       loc.zip = body.results[0].address_components[6].long_name
       loc.country = geo.country;
-      loc.state = geo.state;
       loc.city = geo.city;
+      loc.state = body.results[0].address_components[4].long_name
       loc.lat = geo.ll[0];
       loc.lng = geo.ll[1];
-
+      console.log(body.results[0]);
       res.json(loc);
     }
   })
@@ -32,7 +32,7 @@ app.get('/lookup', function(req, res){
   
 });
 
-app.set('port', (process.env.PORT || 5000))
+app.set('port', (process.env.PORT || 3000))
 app.listen(app.get('port'), function() {
     console.log("Node app is running at localhost:" + app.get('port'))
 })
